@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfApp91.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp91"
+        mc:Ignorable="d"
+        Title="Window1" Height="1080" Width="1920">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF6F6F6F" Offset="0.348"/>
+                <GradientStop Color="#FF2B2B2B" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Content="" HorizontalAlignment="Left" Margin="80,374,0,0" VerticalAlignment="Top" Height="306" Width="484">
+            <Button.Background>
+                <ImageBrush ImageSource="/pngtree-crinkled-white-paper-texture-in-the-background-image_13662732.png"/>
+            </Button.Background>
+        
+        </Button>
+
+        <Button Content="" HorizontalAlignment="Left" Margin="703,0,0,0" VerticalAlignment="Center" Height="307" Width="479" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.178"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="/371599f293925102e6d673b5c907ef2c.png"/>
+            </Button.Background>
+        </Button>
+        
+        <Label Content="ВЫБЕРИТЕ ПРЕДМЕТ" FontWeight="Bold" Foreground="White" FontSize="50" HorizontalAlignment="Center" Margin="0,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.393,0.498"/>
+        <Button Content="Выход" HorizontalAlignment="Left" FontSize="30" FontWeight="Bold" Margin="1620,924,0,0" VerticalAlignment="Top" Height="146" Width="293" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
+            <Button.Resources>
+                <Style TargetType ="Border">
+                    <Setter Property="CornerRadius" Value="15">
+                    </Setter>
+                </Style>
+            </Button.Resources>
+            
+
+        </Button>
+        <Label Content="." HorizontalAlignment="Center" Margin="0,191,0,0" VerticalAlignment="Top"/>
+        
+        <Label Content="Результат:" FontSize="40" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,144,0,0" VerticalAlignment="Top"/>
+        
+        <Button Content="" HorizontalAlignment="Left" Margin="1314,0,0,0" VerticalAlignment="Center" Height="307" Width="479" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/1feb579a04d9cb2ebfa082d4aa93e810.png"/>
+            </Button.Background>
+         
+        </Button>
+
+    </Grid>
+</Window>
