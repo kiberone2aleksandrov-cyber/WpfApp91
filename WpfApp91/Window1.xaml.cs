@@ -26,7 +26,7 @@ namespace WpfApp91
             WindowState = WindowState.Maximized;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)//sdfsdf
+        private void Button_Click(object sender, RoutedEventArgs e)//sdfsdfЦУАЦ
         {
 
         }
