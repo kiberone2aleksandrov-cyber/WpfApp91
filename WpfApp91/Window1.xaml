@@ -40,7 +40,7 @@
 
         <Label Content="Результат:" FontSize="40" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,144,0,0" VerticalAlignment="Top"/>
 
-        <Button Content="" HorizontalAlignment="Left" Margin="1314,0,0,0" VerticalAlignment="Center" Height="307" Width="479" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+        <Button Content="" HorizontalAlignment="Left" Margin="1314,0,0,0" VerticalAlignment="Center" Height="307" Width="479" RenderTransformOrigin="0.5,0.5" Click="Button_Click3">
             <Button.Background>
                 <ImageBrush ImageSource="/1feb579a04d9cb2ebfa082d4aa93e810.png"/>
             </Button.Background>

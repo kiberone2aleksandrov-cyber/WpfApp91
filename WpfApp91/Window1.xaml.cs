@@ -35,5 +35,10 @@ namespace WpfApp91
         {
             this.Close();
         }
+
+        private void Button_Click3(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
