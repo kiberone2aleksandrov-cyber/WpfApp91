@@ -17,23 +17,15 @@
             <Button.Background>
                 <ImageBrush ImageSource="/pngtree-crinkled-white-paper-texture-in-the-background-image_13662732.png"/>
             </Button.Background>
-        
+
         </Button>
 
         <Button Content="" HorizontalAlignment="Left" Margin="703,0,0,0" VerticalAlignment="Center" Height="307" Width="479" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.178"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Background>
                 <ImageBrush ImageSource="/371599f293925102e6d673b5c907ef2c.png"/>
             </Button.Background>
         </Button>
-        
+
         <Label Content="ВЫБЕРИТЕ ПРЕДМЕТ" FontWeight="Bold" Foreground="White" FontSize="50" HorizontalAlignment="Center" Margin="0,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.393,0.498"/>
         <Button Content="Выход" HorizontalAlignment="Left" FontSize="30" FontWeight="Bold" Margin="1620,924,0,0" VerticalAlignment="Top" Height="146" Width="293" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
             <Button.Resources>
@@ -42,18 +34,17 @@
                     </Setter>
                 </Style>
             </Button.Resources>
-            
+
 
         </Button>
-        <Label Content="." HorizontalAlignment="Center" Margin="0,191,0,0" VerticalAlignment="Top"/>
-        
+
         <Label Content="Результат:" FontSize="40" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,144,0,0" VerticalAlignment="Top"/>
-        
+
         <Button Content="" HorizontalAlignment="Left" Margin="1314,0,0,0" VerticalAlignment="Center" Height="307" Width="479" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/1feb579a04d9cb2ebfa082d4aa93e810.png"/>
             </Button.Background>
-         
+
         </Button>
 
     </Grid>
