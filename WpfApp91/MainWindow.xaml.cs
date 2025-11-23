@@ -53,17 +53,19 @@ public partial class MainWindow : Window
     {
         var form1 = new Window1();
         form1.Show();
+        this.Close();
     }
 
     private void Button_Click_2(object sender, RoutedEventArgs e)
     {
         var form2 = new Window2();
         form2.Show();
+        this.Close();
     }
 
     private void Button_Click_3(object sender, RoutedEventArgs e)
     {
-        this.Close();
+        Application.Current.Shutdown();
 
     }
 

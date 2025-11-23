@@ -42,9 +42,15 @@ namespace WpfApp91
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e) //назад в игру
         {
+
             this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) //в меню
+        {
+
         }
     }
 

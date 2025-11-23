@@ -46,6 +46,8 @@ namespace WpfApp91
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            var form2 = new Window2();
+            form2.Show();
             this.Close();
         }
 
