@@ -26,9 +26,22 @@ namespace WpfApp91
             WindowState = WindowState.Maximized;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)//sdfsdfЦУАЦ
+        private void Button_Click(object sender, RoutedEventArgs e)//ножницы
         {
-
+            Random r = new Random();
+            int r1 = r.Next(1, 4);
+            if (r1 == 1)
+            {
+                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n ВЫ ПРОИГРАЛИ";
+            }
+            else if (r1 == 2)
+            {
+                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n ВЫ ВЫИГРАЛИ";
+            }
+            else if (r1 == 3)
+            {
+                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n   НИЧЬЯ";
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -36,9 +49,40 @@ namespace WpfApp91
             this.Close();
         }
 
-        private void Button_Click3(object sender, RoutedEventArgs e) ////wefwa34tWV5
+        private void Button_Click3(object sender, RoutedEventArgs e) ////КАМЕНЬ
         {
+            Random r = new Random();
+            int r1 = r.Next(1, 4);
+            if (r1 == 1)
+            {
+                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n    НИЧЬЯ";
+            }
+            else if (r1 == 2)
+            {
+                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n ВЫ ПРОИГРАЛИ";
+            }
+            else if (r1 == 3)
+            {
+                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n ВЫ ВЫИГРАЛИ";
+            }
+        }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e) //БУМАГА
+        {
+            Random r = new Random();
+            int r1 = r.Next(1, 4);
+            if (r1 == 1)
+            {
+                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n ВЫ ВЫИГРАЛИ";
+            }
+            else if (r1 == 2)
+            {
+                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n    НИЧЬЯ";
+            }
+            else if (r1 == 3)
+            {
+                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n ВЫ ПРОИГРАЛИ";
+            }
         }
     }
 }

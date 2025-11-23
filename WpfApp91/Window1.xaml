@@ -13,7 +13,7 @@
                 <GradientStop Color="#FF2B2B2B" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button Content="" HorizontalAlignment="Left" Margin="80,374,0,0" VerticalAlignment="Top" Height="306" Width="484">
+        <Button Content="" HorizontalAlignment="Left" Margin="80,374,0,0" VerticalAlignment="Top" Height="306" Width="484" Click="Button_Click_2">
             <Button.Background>
                 <ImageBrush ImageSource="/pngtree-crinkled-white-paper-texture-in-the-background-image_13662732.png"/>
             </Button.Background>
@@ -46,6 +46,7 @@
             </Button.Background>
 
         </Button>
+        <Label x:Name="labelResult" Content="Label" HorizontalAlignment="Left" Margin="892,264,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
