@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
@@ -49,8 +50,15 @@ namespace WpfApp91
             var form2 = new Window2();
             form2.Show();
             this.Close();
-        }
 
+            Class1.vihodvmenu = true;
+            
+                form2.VernutsaVigruButton.Visibility = Visibility.Visible;
+                form2.VernutsaVigruLabel.Visibility = Visibility.Visible;
+            
+            
+        }
+        
         private void Button_Click3(object sender, RoutedEventArgs e) ////КАМЕНЬ
         {
             Random r = new Random();

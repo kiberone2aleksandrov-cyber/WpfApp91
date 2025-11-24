@@ -56,11 +56,15 @@ public partial class MainWindow : Window
         this.Close();
     }
 
-    private void Button_Click_2(object sender, RoutedEventArgs e)
+    public void Button_Click_2(object sender, RoutedEventArgs e)
     {
         var form2 = new Window2();
         form2.Show();
         this.Close();
+
+        Class1.vihodvmenu = false;                   
+            form2.VernutsaVigruButton.Visibility = Visibility.Hidden;
+            form2.VernutsaVigruLabel.Visibility = Visibility.Hidden;
     }
 
     private void Button_Click_3(object sender, RoutedEventArgs e)
