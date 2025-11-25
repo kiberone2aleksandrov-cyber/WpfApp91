@@ -23,7 +23,6 @@ namespace WpfApp91
         public Window2()
         {
             InitializeComponent();
-            WindowState = WindowState.Maximized;
             TextAnimation();
         }
         private void TextAnimation()

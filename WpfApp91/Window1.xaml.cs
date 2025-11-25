@@ -24,7 +24,7 @@ namespace WpfApp91
         public Window1()
         {
             InitializeComponent();
-            WindowState = WindowState.Maximized;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)//ножницы
