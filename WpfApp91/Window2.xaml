@@ -61,5 +61,6 @@
 
         </Button>
         <Label x:Name="VitiVmenu" Content="Выйти в меню" HorizontalAlignment="Left" Foreground="DarkGray" Margin="1711,973,0,0" VerticalAlignment="Top" Width="190" FontSize="24" FontWeight="Bold"/>
+        <RadioButton x:Name="wewe" Content="1920x1080" HorizontalAlignment="Left" Margin="285,579,0,0" VerticalAlignment="Top" Height="40" Width="325" FontSize="36" Checked="RadioButton_Checked"/>
     </Grid>
 </Window>

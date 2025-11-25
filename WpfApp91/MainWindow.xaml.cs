@@ -23,7 +23,13 @@ public partial class MainWindow : Window
     public MainWindow()
     {      
         InitializeComponent();       
-        TextAnimation();   
+        TextAnimation();
+        Window2 window2 = new Window2();
+        if (window2.b1 == true)
+        {
+            this.Width = 1280;
+            this.Height = 720;
+        }
     }
 
 
@@ -80,5 +86,26 @@ public partial class MainWindow : Window
     private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
     {
 
+    }
+
+    private void Grid_Loaded(object sender, RoutedEventArgs e)
+    {
+       /* Window2 window2 = new Window2();
+        if (window2.b1 == true)
+        {
+            Application.Current.MainWindow = this;
+            Application.Current.MainWindow.Width = 1920;
+            Application.Current.MainWindow.Height = 1080;
+        }*/
+    }
+
+    private void Grid_Unloaded(object sender, RoutedEventArgs e)
+    {
+        Window2 window2 = new Window2();
+        if (window2.b1 == true)
+        {
+            this.Width = 1280;
+            this.Height = 720;
+        }
     }
 }

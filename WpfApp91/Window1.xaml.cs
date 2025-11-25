@@ -23,8 +23,13 @@ namespace WpfApp91
     {
         public Window1()
         {
-            InitializeComponent();
+            var form2 = new Window2();
 
+            InitializeComponent();
+            if(form2.a == 1)
+            {
+                this.Width = 1920;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)//ножницы

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,6 +21,8 @@ namespace WpfApp91
     /// </summary>
     public partial class Window2 : Window
     {
+        public bool b1;
+        public int a;
         public Window2()
         {
             InitializeComponent();
@@ -56,7 +59,13 @@ namespace WpfApp91
             this.Close();
             
         }
-
+        private void w(double width, double height)
+        {
+            foreach (Window2 window in Application.Current.Windows) {
+                window.Width = width;
+                window.Height = height;
+            }
+        }
         private void Window_MouseMove(object sender, MouseEventArgs e)
         {
 
@@ -65,6 +74,27 @@ namespace WpfApp91
         private void Window_MouseWheel(object sender, MouseWheelEventArgs e)
         {
 
+        }
+
+        public void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            a = 1;
+          Window1 form2 = new Window1();
+                //var form2 = new Window2();
+               // form2.Width = 1920;
+                //form2.Height = 1080;
+            //Application.Current.MainWindow = this;
+            //Application.Current.MainWindow.Width = 1920;
+            //Application.Current.MainWindow.Height = 1080;
+           
+           b1 = true;
+            form2.Width = 1980;
+            form2.Height = 1080;
+             form2.Owner = this;
+            if (((RadioButton)sender).IsChecked == true)
+            {
+                w(1920, 1080);
+            }
         }
     }
 
