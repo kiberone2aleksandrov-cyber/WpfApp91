@@ -24,11 +24,10 @@ public partial class MainWindow : Window
     {      
         InitializeComponent();       
         TextAnimation();
-        Window2 window2 = new Window2();
-        if (window2.b1 == true)
+        if (Razreshenie.a == 1)
         {
-            this.Width = 1280;
-            this.Height = 720;
+            this.Width = 1920;
+            this.Height = 1080;
         }
     }
 
@@ -90,22 +89,11 @@ public partial class MainWindow : Window
 
     private void Grid_Loaded(object sender, RoutedEventArgs e)
     {
-       /* Window2 window2 = new Window2();
-        if (window2.b1 == true)
-        {
-            Application.Current.MainWindow = this;
-            Application.Current.MainWindow.Width = 1920;
-            Application.Current.MainWindow.Height = 1080;
-        }*/
+       
     }
 
     private void Grid_Unloaded(object sender, RoutedEventArgs e)
     {
-        Window2 window2 = new Window2();
-        if (window2.b1 == true)
-        {
-            this.Width = 1280;
-            this.Height = 720;
-        }
+       
     }
 }

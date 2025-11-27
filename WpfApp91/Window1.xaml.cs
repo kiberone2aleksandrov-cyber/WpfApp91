@@ -22,13 +22,12 @@ namespace WpfApp91
     public partial class Window1 : Window
     {
         public Window1()
-        {
-            var form2 = new Window2();
-
+        {          
             InitializeComponent();
-            if(form2.a == 1)
+            if (Razreshenie.a == 1)
             {
                 this.Width = 1920;
+                this.Height = 1080;
             }
         }
 
