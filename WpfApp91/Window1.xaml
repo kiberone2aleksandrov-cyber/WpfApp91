@@ -5,27 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp91"
         mc:Ignorable="d"
-        Width="{x:Static SystemParameters.PrimaryScreenWidth}"  
-        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        Width="1903"  
+        Height="1085"
         Title="Window1">
-    <Grid>
+    <Grid Width="1920" Height="1080">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1920"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF6F6F6F" Offset="0.348"/>
                 <GradientStop Color="#FF2B2B2B" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button Content="" HorizontalAlignment="Left" Margin="80,374,0,0" VerticalAlignment="Top" Height="306" Width="484" Click="Button_Click_2">
+        <Button x:Name="KAMEN" Content="" HorizontalAlignment="Left" Margin="187,379,0,0" VerticalAlignment="Top" Height="308" Width="360" Click="Button_Click_2" BorderThickness="0,0,0,0" ClipToBounds="True" RenderTransformOrigin="0.5,0.5">
             <Button.Background>
-                <ImageBrush ImageSource="/pngtree-crinkled-white-paper-texture-in-the-background-image_13662732.png"/>
+                <ImageBrush ImageSource="/i.png" Stretch="Uniform"/>
             </Button.Background>
-
+            
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="50">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            
         </Button>
 
-        <Button Content="" HorizontalAlignment="Left" Margin="703,0,0,0" VerticalAlignment="Center" Height="307" Width="479" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+        <Button x:Name="NOJNICI" Content="" HorizontalAlignment="Left" Margin="703,0,0,0" VerticalAlignment="Center" Height="308" Width="438" RenderTransformOrigin="0.5,0.5" Click="Button_Click" Grid.ColumnSpan="1" Padding="1,1,1,5" BorderThickness="0,0,0,0">
             <Button.Background>
-                <ImageBrush ImageSource="/371599f293925102e6d673b5c907ef2c.png"/>
+                <ImageBrush ImageSource="/i (1).png" Stretch="Fill"/>
             </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="50">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
 
         <Label Content="ВЫБЕРИТЕ ПРЕДМЕТ" FontWeight="Bold" Foreground="White" FontSize="50" HorizontalAlignment="Center" Margin="0,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.393,0.498"/>
@@ -45,11 +69,20 @@
 
         <Label Content="Результат:" FontSize="40" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,144,0,0" VerticalAlignment="Top"/>
 
-        <Button Content="" HorizontalAlignment="Left" Margin="1314,0,0,0" VerticalAlignment="Center" Height="307" Width="479" RenderTransformOrigin="0.5,0.5" Click="Button_Click3">
+        <Button Content="" HorizontalAlignment="Left" Margin="1314,0,0,0" VerticalAlignment="Center" Height="308" Width="360" RenderTransformOrigin="0.5,0.5" Click="Button_Click3" BorderThickness="0,0,0,0">
             <Button.Background>
-                <ImageBrush ImageSource="/1feb579a04d9cb2ebfa082d4aa93e810.png"/>
+                <ImageBrush ImageSource="/i (2).png"/>
             </Button.Background>
-
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="50">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
         <Label x:Name="labelResult" Content=" " Foreground="LightGray" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="892,264,0,0" VerticalAlignment="Top"/>
 

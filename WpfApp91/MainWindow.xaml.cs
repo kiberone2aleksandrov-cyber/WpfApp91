@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System.Reflection.Emit;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,8 +30,11 @@ public partial class MainWindow : Window
             this.Width = 1920;
             this.Height = 1080;
         }
+            MediaPlayer player = new MediaPlayer();
+        player.Open(new Uri("C:\\Users\\kotov\\Downloads\\FONOVAIA_MUZIKA.mp3", UriKind.RelativeOrAbsolute));
+        player.Play();
     }
-
+    
 
     private void TextAnimation()
     {
@@ -55,6 +59,26 @@ public partial class MainWindow : Window
 
     private void Button_Click_1(object sender, RoutedEventArgs e)
     {
+      /*  IGRAT.PreviewMouseDown += (s, e) =>
+        {
+            var scaleTransform = new ScaleTransform(1.0, 1.0);
+            IGRAT.RenderTransformOrigin = new Point(0.5, 0.5);
+            IGRAT.RenderTransform = scaleTransform;
+
+            var animation = new DoubleAnimation(1.0, 1.1, TimeSpan.FromMilliseconds(100));
+            scaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, animation);
+            scaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, animation);
+        };
+
+        IGRAT.PreviewMouseUp += (s, e) =>
+        {
+            if (IGRAT.RenderTransform is ScaleTransform scaleTransform)
+            {
+                var animation = new DoubleAnimation(1.1, 1.0, TimeSpan.FromMilliseconds(100));
+                scaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, animation);
+                scaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, animation);
+            }
+        };*/
         var form1 = new Window1();
         form1.Show();
         this.Close();

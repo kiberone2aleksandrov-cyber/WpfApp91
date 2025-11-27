@@ -44,7 +44,7 @@
         </Button>
 
 
-        <Button Content="Играть" Foreground="Gray" FontWeight="Bold" Margin="359,402,359,532" FontSize="24" Click="Button_Click_1">
+        <Button x:Name="IGRAT" Content="Играть" Foreground="Gray" FontWeight="Bold" Margin="359,402,359,532" FontSize="24" Click="Button_Click_1">
 
             <Button.Style>
                 <Style TargetType="{x:Type Button}">

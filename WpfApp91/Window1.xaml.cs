@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace WpfApp91
 {
@@ -65,6 +66,7 @@ namespace WpfApp91
         
         private void Button_Click3(object sender, RoutedEventArgs e) ////КАМЕНЬ
         {
+            
             Random r = new Random();
             int r1 = r.Next(1, 4);
             if (r1 == 1)
@@ -83,6 +85,7 @@ namespace WpfApp91
 
         private void Button_Click_2(object sender, RoutedEventArgs e) //БУМАГА
         {
+          
             Random r = new Random();
             int r1 = r.Next(1, 4);
             if (r1 == 1)

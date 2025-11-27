@@ -14,8 +14,11 @@
     <None Remove="a09adb8722a63ec83e233132ed3e5eaf-no-bg-preview %28carve.photos%29.png" />
     <None Remove="a09adb8722a63ec83e233132ed3e5eaf.jpg" />
     <None Remove="Black-Undo-Transparent.png" />
+    <None Remove="i %281%29.png" />
+    <None Remove="i %282%29.png" />
     <None Remove="i-no-bg-preview %28carve.photos%29.png" />
     <None Remove="i.jpg" />
+    <None Remove="i.png" />
     <None Remove="png-transparent-computer-icons-font-awesome-gears-symbol-photography-logo-desktop-wallpaper.png" />
     <None Remove="png-transparent-computer-icons-login-exit-miscellaneous-angle-text.png" />
     <None Remove="pngtree-crinkled-white-paper-texture-in-the-background-image_13662732.png" />
@@ -27,8 +30,11 @@
     <Resource Include="a09adb8722a63ec83e233132ed3e5eaf-no-bg-preview (carve.photos).png" />
     <Resource Include="a09adb8722a63ec83e233132ed3e5eaf.jpg" />
     <Resource Include="Black-Undo-Transparent.png" />
+    <Resource Include="i (1).png" />
+    <Resource Include="i (2).png" />
     <Resource Include="i-no-bg-preview (carve.photos).png" />
     <Resource Include="i.jpg" />
+    <Resource Include="i.png" />
     <Resource Include="png-transparent-computer-icons-font-awesome-gears-symbol-photography-logo-desktop-wallpaper.png" />
     <Resource Include="png-transparent-computer-icons-login-exit-miscellaneous-angle-text.png" />
     <Resource Include="pngtree-crinkled-white-paper-texture-in-the-background-image_13662732.png" />
