@@ -20,6 +20,8 @@ namespace WpfApp91;
 /// </summary>
 public partial class MainWindow : Window
 {
+ 
+    
     
     public MainWindow()
     {      
@@ -35,7 +37,7 @@ public partial class MainWindow : Window
         player.Play();
     }
     
-
+    
     private void TextAnimation()
     {
         ColorAnimation textanim = new ColorAnimation
@@ -51,7 +53,7 @@ public partial class MainWindow : Window
         mainlabel.Foreground.BeginAnimation(SolidColorBrush.ColorProperty, textanim);
 
     }
-
+    
     private void Button_Click(object sender, RoutedEventArgs e)
     {
 
@@ -108,7 +110,7 @@ public partial class MainWindow : Window
 
     private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
     {
-
+        
     }
 
     private void Grid_Loaded(object sender, RoutedEventArgs e)

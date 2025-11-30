@@ -94,29 +94,6 @@
 
         </Button>
         <Label Content="Версия 1.0" HorizontalAlignment="Left" FontWeight="Bold" Foreground="White" FontSize="20" Margin="1782,1009,0,0" VerticalAlignment="Top" Height="45" Width="192"/>
-        <TextBox  HorizontalAlignment="Left" Margin="31,979,0,0" FontSize="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248" Height="52"  BorderBrush="#FFAFAFAF" SelectionBrush="White" SelectionTextBrush="White" Foreground="DarkGray" TextChanged="TextBox_TextChanged">
-            <TextBox.Style>
-                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-                    <Style.Resources>
-                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
-                            <VisualBrush.Visual>
-                                <Label Content="Введите⠀ник⠀" Foreground="LightGray"  />
-                            </VisualBrush.Visual>
-                        </VisualBrush>
-                    </Style.Resources>
-                    <Style.Triggers>
-                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
-                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                        </Trigger>
-                        <Trigger Property="Text" Value="{x:Null}">
-                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                        </Trigger>
-                        <Trigger Property="IsKeyboardFocused" Value="True">
-                            <Setter Property="Background" Value="White" />
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBox.Style>
-        </TextBox>
+        
     </Grid>
 </Window>

@@ -22,6 +22,9 @@ namespace WpfApp91
     /// </summary>
     public partial class Window1 : Window
     {
+        public string nickname;
+
+
         public Window1()
         {          
             InitializeComponent();
@@ -38,16 +41,17 @@ namespace WpfApp91
             int r1 = r.Next(1, 4);
             if (r1 == 1)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n  ВЫ ПРОИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ\n " + nickname + "  проиграл";
             }
             else if (r1 == 2)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n  ВЫ ВЫИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ\n " + nickname + "  выиграл";
             }
             else if (r1 == 3)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n   НИЧЬЯ";
+                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ\n   НИЧЬЯ";
             }
+            nickname = textbox1.Text;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -61,7 +65,7 @@ namespace WpfApp91
                 form2.VernutsaVigruButton.Visibility = Visibility.Visible;
                 form2.VernutsaVigruLabel.Visibility = Visibility.Visible;
             
-            
+
         }
         
         private void Button_Click3(object sender, RoutedEventArgs e) ////КАМЕНЬ
@@ -75,12 +79,13 @@ namespace WpfApp91
             }
             else if (r1 == 2)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n  ВЫ ПРОИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n " + nickname + "  выиграл" ;
             }
             else if (r1 == 3)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n  ВЫ ВЫИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n " + nickname + "  проиграл";
             }
+            nickname = textbox1.Text;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e) //БУМАГА
@@ -90,7 +95,7 @@ namespace WpfApp91
             int r1 = r.Next(1, 4);
             if (r1 == 1)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n  ВЫ ВЫИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n " + nickname + "  выиграл";
             }
             else if (r1 == 2)
             {
@@ -98,8 +103,14 @@ namespace WpfApp91
             }
             else if (r1 == 3)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n  ВЫ ПРОИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n " + nickname + "  проиграл";
             }
+            nickname = textbox1.Text;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
         }
     }
 }
