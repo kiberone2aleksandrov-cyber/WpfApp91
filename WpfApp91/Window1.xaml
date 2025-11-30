@@ -22,7 +22,7 @@
             <Button.Background>
                 <ImageBrush ImageSource="/i.png" Stretch="Uniform"/>
             </Button.Background>
-            
+
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}"
@@ -33,7 +33,7 @@
                     </Border>
                 </ControlTemplate>
             </Button.Template>
-            
+
         </Button>
 
         <Button x:Name="NOJNICI" Content="" HorizontalAlignment="Left" Margin="703,0,0,0" VerticalAlignment="Center" Height="308" Width="438" RenderTransformOrigin="0.5,0.5" Click="Button_Click" Grid.ColumnSpan="1" Padding="1,1,1,5" BorderThickness="0,0,0,0">
@@ -84,8 +84,8 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Label x:Name="labelResult" Content=" " Foreground="LightGray" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="836,262,0,0" VerticalAlignment="Top"/>
-        <TextBox  HorizontalAlignment="Left" Margin="31,979,0,0" FontSize="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248" Height="52"  BorderBrush="#FFAFAFAF" SelectionBrush="White" SelectionTextBrush="White" Foreground="DarkGray" x:Name="textbox1" TextChanged="TextBox_TextChanged">
+        <Label x:Name="labelResult" Content=" " Foreground="LightGray" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="834,234,0,0" VerticalAlignment="Top"/>
+        <TextBox  HorizontalAlignment="Left" Margin="10,999,0,0" FontSize="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248" Height="52"  BorderBrush="#FFAFAFAF" SelectionBrush="White" SelectionTextBrush="White" Foreground="DarkGray" x:Name="textbox1" TextChanged="TextBox_TextChanged">
             <TextBox.Style>
                 <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                     <Style.Resources>
@@ -109,6 +109,9 @@
                 </Style>
             </TextBox.Style>
         </TextBox>
+        <Rectangle HorizontalAlignment="Center" Height="100" Margin="0,207,0,0" Stroke="Black" VerticalAlignment="Top" Width="364"/>
+
+
 
     </Grid>
 </Window>
