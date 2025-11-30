@@ -38,11 +38,11 @@ namespace WpfApp91
             int r1 = r.Next(1, 4);
             if (r1 == 1)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n ВЫ ПРОИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n  ВЫ ПРОИГРАЛИ";
             }
             else if (r1 == 2)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n ВЫ ВЫИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n  ВЫ ВЫИГРАЛИ";
             }
             else if (r1 == 3)
             {
@@ -75,11 +75,11 @@ namespace WpfApp91
             }
             else if (r1 == 2)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n ВЫ ПРОИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n  ВЫ ПРОИГРАЛИ";
             }
             else if (r1 == 3)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n ВЫ ВЫИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n  ВЫ ВЫИГРАЛИ";
             }
         }
 
@@ -90,7 +90,7 @@ namespace WpfApp91
             int r1 = r.Next(1, 4);
             if (r1 == 1)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n ВЫ ВЫИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n  ВЫ ВЫИГРАЛИ";
             }
             else if (r1 == 2)
             {
@@ -98,7 +98,7 @@ namespace WpfApp91
             }
             else if (r1 == 3)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n ВЫ ПРОИГРАЛИ";
+                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n  ВЫ ПРОИГРАЛИ";
             }
         }
     }

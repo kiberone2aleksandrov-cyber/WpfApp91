@@ -31,7 +31,7 @@ public partial class MainWindow : Window
             this.Height = 1080;
         }
             MediaPlayer player = new MediaPlayer();
-        player.Open(new Uri("C:\\Users\\kotov\\Downloads\\FONOVAIA_MUZIKA.mp3", UriKind.RelativeOrAbsolute));
+        player.Open(new Uri("C:\\Users\\Админ\\Downloads\\FONOVAIA_MUZIKA.mp3", UriKind.RelativeOrAbsolute));
         player.Play();
     }
     
