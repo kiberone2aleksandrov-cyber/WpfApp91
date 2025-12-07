@@ -18,8 +18,8 @@
                 <GradientStop Color="#FF2B2B2B" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        
-        <Button x:Name="KAMEN" Content="" HorizontalAlignment="Left" Margin="187,379,0,0" VerticalAlignment="Top" Height="308" Width="360" Click="Button_Click_2" BorderThickness="0,0,0,0" ClipToBounds="True" RenderTransformOrigin="0.5,0.5">
+
+        <Button x:Name="KAMEN" Content="" HorizontalAlignment="Left" Margin="186,381,0,0" VerticalAlignment="Top" Height="308" Width="360" Click="Button_Click_2" BorderThickness="0,0,0,0" ClipToBounds="True" RenderTransformOrigin="0.5,0.5">
             <Button.Background>
                 <ImageBrush ImageSource="/i.png" Stretch="Uniform"/>
             </Button.Background>
@@ -37,7 +37,7 @@
 
         </Button>
 
-        <Button x:Name="NOJNICI" Content="" HorizontalAlignment="Left" Margin="703,0,0,0" VerticalAlignment="Center" Height="308" Width="438" RenderTransformOrigin="0.5,0.5" Click="Button_Click" Grid.ColumnSpan="1" Padding="1,1,1,5" BorderThickness="0,0,0,0">
+        <Button x:Name="NOJNICI" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Height="308" Width="438" RenderTransformOrigin="0.5,0.5" Click="Button_Click" Padding="1,1,1,5" BorderThickness="0,0,0,0">
             <Button.Background>
                 <ImageBrush ImageSource="/i (1).png" Stretch="Fill"/>
             </Button.Background>
@@ -70,7 +70,7 @@
 
         <Label Content="Результат:" FontSize="40" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,144,0,0" VerticalAlignment="Top"/>
 
-        <Button Content="" HorizontalAlignment="Left" Margin="1314,0,0,0" VerticalAlignment="Center" Height="308" Width="360" RenderTransformOrigin="0.5,0.5" Click="Button_Click3" BorderThickness="0,0,0,0">
+        <Button Content="" HorizontalAlignment="Left" Margin="1375,0,0,0" VerticalAlignment="Center" Height="308" Width="360" RenderTransformOrigin="0.5,0.5" Click="Button_Click3" BorderThickness="0,0,0,0">
             <Button.Background>
                 <ImageBrush ImageSource="/i (2).png"/>
             </Button.Background>
