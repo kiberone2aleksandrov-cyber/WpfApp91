@@ -23,7 +23,8 @@ namespace WpfApp91
     public partial class Window1 : Window
     {
         public string nickname;
-
+        public int pobeda = 0;
+        
 
         public Window1()
         {          
@@ -34,19 +35,24 @@ namespace WpfApp91
                 this.Height = 1080;
             }
             WindowState = WindowState.Maximized;
+            POBEDA_label.Content = pobeda;
         }
-
+        
         private void Button_Click(object sender, RoutedEventArgs e)//ножницы
         {
+            
+
             Random r = new Random();
             int r1 = r.Next(1, 4);
             if (r1 == 1)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ\n " + nickname + "  проиграл";
+                
             }
             else if (r1 == 2)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ\n " + nickname + "  выиграл";
+                POBEDA_label.Content = pobeda ++ ;
             }
             else if (r1 == 3)
             {
@@ -81,22 +87,25 @@ namespace WpfApp91
             else if (r1 == 2)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n " + nickname + "  выиграл" ;
+                POBEDA_label.Content = pobeda ++;
             }
             else if (r1 == 3)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n " + nickname + "  проиграл";
+                
             }
             nickname = textbox1.Text;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e) //БУМАГА
         {
-          
+            
             Random r = new Random();
             int r1 = r.Next(1, 4);
             if (r1 == 1)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n " + nickname + "  выиграл";
+                POBEDA_label.Content = pobeda ++;
             }
             else if (r1 == 2)
             {
