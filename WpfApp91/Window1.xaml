@@ -18,6 +18,7 @@
                 <GradientStop Color="#FF2B2B2B" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        
         <Button x:Name="KAMEN" Content="" HorizontalAlignment="Left" Margin="187,379,0,0" VerticalAlignment="Top" Height="308" Width="360" Click="Button_Click_2" BorderThickness="0,0,0,0" ClipToBounds="True" RenderTransformOrigin="0.5,0.5">
             <Button.Background>
                 <ImageBrush ImageSource="/i.png" Stretch="Uniform"/>

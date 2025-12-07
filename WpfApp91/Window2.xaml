@@ -19,13 +19,13 @@
 
         <Label x:Name ="label1" Content="Настройки" FontWeight="Bold" FontSize="70" Foreground="White" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top"/>
 
-        <Slider HorizontalAlignment="Left" Margin="852,190,0,0" VerticalAlignment="Top" Width="731" Height="30"/>
+        <Slider HorizontalAlignment="Left" Margin="676,276,0,0" VerticalAlignment="Top" Width="585" Height="30"/>
 
-        <Label Content="Чувствительность мыши" FontWeight="Bold" FontSize="50" Foreground="LightGray" HorizontalAlignment="Left" Margin="124,152,0,0" VerticalAlignment="Top"/>
+        <Label Content="Чувствительность мыши" FontWeight="Bold" FontSize="50" Foreground="LightGray" HorizontalAlignment="Center" Margin="0,194,0,0" VerticalAlignment="Top"/>
 
-        <Label Content="Громокость музыки" FontWeight="Bold" FontSize="50" Foreground="LightGray" HorizontalAlignment="Left" Margin="124,268,0,0" VerticalAlignment="Top"/>
+        <Label Content="Громокость музыки" FontWeight="Bold" FontSize="50" Foreground="LightGray" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top"/>
 
-        <Slider HorizontalAlignment="Left" Margin="852,306,0,0" VerticalAlignment="Top" Width="731" Height="30"/>
+        <Slider HorizontalAlignment="Left" Margin="676,448,0,0" VerticalAlignment="Top" Width="585" Height="30"/>
         <Button x:Name="VernutsaVigruButton" Visibility="Visible" Content="" HorizontalAlignment="Left" FontSize="30" FontWeight="Bold" Margin="53,830,0,0" VerticalAlignment="Top" Height="123" Width="142" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1" BorderThickness="0,0,0,0">
             <Button.Resources>
                 <Style TargetType ="{x:Type Border}">
@@ -61,9 +61,12 @@
 
         </Button>
         <Label x:Name="VitiVmenu" Content="Выйти в меню" HorizontalAlignment="Left" Foreground="DarkGray" Margin="1711,973,0,0" VerticalAlignment="Top" Width="190" FontSize="24" FontWeight="Bold"/>
-        <RadioButton x:Name="wewe" Content="1920x1080" HorizontalAlignment="Left" Margin="854,389,0,0" VerticalAlignment="Top" Height="70" Width="296" FontSize="48" Checked="RadioButton_Checked" IsChecked="False" FontWeight="DemiBold"  />
-        <RadioButton Content="2560x1440" HorizontalAlignment="Left" Margin="1183,386,0,0" VerticalAlignment="Top" FontSize="48" Width="296" FontWeight="DemiBold" Checked="RadioButton_Checked_1">
+        <RadioButton x:Name="wewe" Content="1920x1080" HorizontalAlignment="Left" Margin="650,669,0,0" VerticalAlignment="Top" Height="70" Width="296" FontSize="48" Checked="RadioButton_Checked" IsChecked="False" FontWeight="DemiBold"  />
+        <RadioButton Content="2560x1440" HorizontalAlignment="Left" Margin="1036,669,0,0" VerticalAlignment="Top" FontSize="48" Width="296" FontWeight="DemiBold" Checked="RadioButton_Checked_1">
         </RadioButton>
-        <Label Content="Разрешение" FontWeight="Bold" FontSize="50" Foreground="LightGray" HorizontalAlignment="Left" Margin="124,386,0,0" VerticalAlignment="Top"/>
+        <Label Content="Разрешение" FontWeight="Bold" FontSize="50" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,532,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="112" Margin="596,194,0,0" Stroke="DarkGray" VerticalAlignment="Top" Width="736"/>
+        <Rectangle HorizontalAlignment="Left" Height="107" Margin="600,366,0,0" Stroke="DarkGray" VerticalAlignment="Top" Width="736"/>
+        <Rectangle HorizontalAlignment="Left" Height="219" Margin="600,532,0,0" Stroke="DarkGray" VerticalAlignment="Top" Width="736"/>
     </Grid>
 </Window>

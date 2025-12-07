@@ -6,8 +6,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp91"
+        ResizeMode="CanResizeWithGrip"
         mc:Ignorable="d"     
         Title="MainWindow">
+   
     <Grid Loaded="Grid_Loaded" Unloaded="Grid_Unloaded">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -15,36 +17,10 @@
                 <GradientStop Color="#FF2B2B2B" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        
+        <Label Content="КАМЕНЬ   НОЖНИЦЫ   БУМАГА" FontSize="70" Width="Auto" Height="Auto" x:Name="mainlabel" HorizontalAlignment="Center" FontWeight ="Bold" Margin="0,168,0,0" VerticalAlignment="Top" Foreground="White"/>
 
-        <Label Content="КАМЕНЬ   НОЖНИЦЫ   БУМАГА" FontSize="70" x:Name="mainlabel" HorizontalAlignment="Center" FontWeight ="Bold" Margin="0,168,0,0" VerticalAlignment="Top" Foreground="White"/>
-
-        <Button Content="Выход" Foreground="Gray" FontWeight="Bold" Margin="359,769,359,163" FontSize="24" Click="Button_Click_3">
-
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
-                            <Setter Property="RenderTransform">
-                                <Setter.Value>
-                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
-                                </Setter.Value>
-                            </Setter>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-            </Button.Resources>
-
-        </Button>
-
-
-        <Button x:Name="IGRAT" Content="Играть" Foreground="Gray" FontWeight="Bold" Margin="359,402,359,532" FontSize="24" Click="Button_Click_1">
+        <Button Content="Выход" Foreground="Gray" Width="Auto" Height="Auto" FontWeight="Bold" Margin="359,769,359,163" FontSize="24" Click="Button_Click_3">
 
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
@@ -69,7 +45,8 @@
 
         </Button>
 
-        <Button Content="Настройки" Foreground="Gray" FontWeight="Bold" Margin="359,585,359,348" FontSize="24" Click="Button_Click_2">
+
+        <Button x:Name="IGRAT" Content="Играть" Width="Auto" Height="Auto" Foreground="Gray" FontWeight="Bold" Margin="359,402,359,532" FontSize="24" Click="Button_Click_1">
 
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
@@ -93,7 +70,32 @@
             </Button.Resources>
 
         </Button>
-        <Label Content="Версия 1.0" HorizontalAlignment="Left" FontWeight="Bold" Foreground="White" FontSize="20" Margin="1782,1009,0,0" VerticalAlignment="Top" Height="45" Width="192"/>
+
+        <Button Content="Настройки" Foreground="Gray" Width="Auto" Height="Auto" FontWeight="Bold" Margin="359,585,359,348" FontSize="24" Click="Button_Click_2">
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+        <Label Content="Версия 1.0" HorizontalAlignment="Left" Width="Auto" Height="Auto" FontWeight="Bold" Foreground="White" FontSize="20" Margin="1782,1009,0,0" VerticalAlignment="Top" />
         
     </Grid>
 </Window>

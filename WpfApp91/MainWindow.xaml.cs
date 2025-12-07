@@ -85,6 +85,7 @@ public partial class MainWindow : Window
         var form1 = new Window1();
         form1.Show();
         this.Close();
+        
     }
 
     public void Button_Click_2(object sender, RoutedEventArgs e)
