@@ -38,6 +38,7 @@ namespace WpfApp91
             {
                 wewe.IsChecked = true;
             }
+            WindowState = WindowState.Maximized;
         }
         private void TextAnimation()
         {
@@ -88,6 +89,13 @@ namespace WpfApp91
             Razreshenie.a = 1;
             this.Width = 1920;
             this.Height = 1080;
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            Razreshenie.a = 1;
+            this.Width = 2560;
+            this.Height = 1440;
         }
     }
 

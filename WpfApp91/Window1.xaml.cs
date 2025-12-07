@@ -33,6 +33,7 @@ namespace WpfApp91
                 this.Width = 1920;
                 this.Height = 1080;
             }
+            WindowState = WindowState.Maximized;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)//ножницы

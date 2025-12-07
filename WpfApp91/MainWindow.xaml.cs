@@ -35,6 +35,7 @@ public partial class MainWindow : Window
             MediaPlayer player = new MediaPlayer();
         player.Open(new Uri("C:\\Users\\Админ\\Downloads\\FONOVAIA_MUZIKA.mp3", UriKind.RelativeOrAbsolute));
         player.Play();
+        WindowState = WindowState.Maximized;
     }
     
     
