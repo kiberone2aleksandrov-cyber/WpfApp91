@@ -97,6 +97,13 @@ namespace WpfApp91
             this.Width = 2560;
             this.Height = 1440;
         }
+
+        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
+        {
+            Razreshenie.a = 1;
+            this.Width = 3840;
+            this.Height = 2160;
+        }
     }
 
 }

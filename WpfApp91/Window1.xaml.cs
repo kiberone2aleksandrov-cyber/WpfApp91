@@ -36,6 +36,8 @@ namespace WpfApp91
             }
             WindowState = WindowState.Maximized;
             POBEDA_label.Content = pobeda;
+
+            achievments();
         }
         
         private void Button_Click(object sender, RoutedEventArgs e)//ножницы
@@ -121,6 +123,15 @@ namespace WpfApp91
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             
+        }
+        
+        private void achievments()
+        {
+            if (pobeda == 25)
+            {
+                achievment.Visibility = Visibility.Visible;
+            }
+
         }
     }
 }

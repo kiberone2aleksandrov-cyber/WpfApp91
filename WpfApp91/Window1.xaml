@@ -112,7 +112,10 @@
         </TextBox>
         <Rectangle HorizontalAlignment="Center" Height="100" Margin="0,207,0,0" Stroke="Black" VerticalAlignment="Top" Width="364"/>
         <Label Content="Побед:" HorizontalAlignment="Left" Foreground="White" FontSize="50" FontWeight="Bold"  Margin="834,759,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="POBEDA_label" Content="0" FontSize="40" HorizontalAlignment="Left" Margin="1031,772,0,0" Foreground="White" FontWeight="Bold" VerticalAlignment="Top"/>
+        <Label x:Name="POBEDA_label" Content="0" FontSize="40" HorizontalAlignment="Left" Margin="1031,770,0,0" Foreground="White" FontWeight="Bold" VerticalAlignment="Top"/>
+        <Label x:Name="achievment" Content="открыто достижение: победитель по жизни" FontSize="30" Visibility="Hidden" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="1245,10,0,0" VerticalAlignment="Top" Height="46" Width="665"/>
+
+
 
 
 

@@ -61,12 +61,13 @@
 
         </Button>
         <Label x:Name="VitiVmenu" Content="Выйти в меню" HorizontalAlignment="Left" Foreground="DarkGray" Margin="1711,973,0,0" VerticalAlignment="Top" Width="190" FontSize="24" FontWeight="Bold"/>
-        <RadioButton x:Name="wewe" Content="1920x1080" HorizontalAlignment="Left" Margin="650,669,0,0" VerticalAlignment="Top" Height="70" Width="296" FontSize="48" Checked="RadioButton_Checked" IsChecked="False" FontWeight="DemiBold"  />
-        <RadioButton Content="2560x1440" HorizontalAlignment="Left" Margin="1036,669,0,0" VerticalAlignment="Top" FontSize="48" Width="296" FontWeight="DemiBold" Checked="RadioButton_Checked_1">
+        <RadioButton x:Name="wewe" Content="1920x1080" HorizontalAlignment="Left" Margin="650,609,0,0" VerticalAlignment="Top" Height="70" Width="296" FontSize="48" Checked="RadioButton_Checked" IsChecked="False" FontWeight="DemiBold"  />
+        <RadioButton Content="2560x1440" HorizontalAlignment="Left" Margin="650,679,0,0" VerticalAlignment="Top" FontSize="48" Width="296" FontWeight="DemiBold" Checked="RadioButton_Checked_1">
         </RadioButton>
         <Label Content="Разрешение" FontWeight="Bold" FontSize="50" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,532,0,0"/>
         <Rectangle HorizontalAlignment="Left" Height="112" Margin="596,194,0,0" Stroke="DarkGray" VerticalAlignment="Top" Width="736"/>
-        <Rectangle HorizontalAlignment="Left" Height="107" Margin="600,366,0,0" Stroke="DarkGray" VerticalAlignment="Top" Width="736"/>
-        <Rectangle HorizontalAlignment="Left" Height="219" Margin="600,532,0,0" Stroke="DarkGray" VerticalAlignment="Top" Width="736"/>
+        <Rectangle HorizontalAlignment="Left" Height="107" Margin="596,371,0,0" Stroke="DarkGray" VerticalAlignment="Top" Width="736"/>
+        <Rectangle HorizontalAlignment="Left" Height="276" Margin="596,534,0,0" Stroke="DarkGray" VerticalAlignment="Top" Width="736"/>
+        <RadioButton Content="3840x2160" HorizontalAlignment="Left" Margin="650,747,0,0" VerticalAlignment="Top" FontSize="48" Width="296" FontWeight="DemiBold" Checked="RadioButton_Checked_2"/>
     </Grid>
 </Window>
