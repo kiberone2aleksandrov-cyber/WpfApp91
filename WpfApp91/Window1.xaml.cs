@@ -14,6 +14,7 @@ using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
+using System.Windows.Threading;
 
 namespace WpfApp91
 {
@@ -26,6 +27,7 @@ namespace WpfApp91
         public int pobeda = 0;
         
 
+        DispatcherTimer timer = new DispatcherTimer();
         public Window1()
         {          
             InitializeComponent();
@@ -38,27 +40,48 @@ namespace WpfApp91
             POBEDA_label.Content = pobeda;
 
             achievments();
+
+
+            
+            timer.Interval = TimeSpan.FromMilliseconds(50);
+            timer.Tick += timer_Tick;
+            
         }
-        
+        void timer_Tick(object sender, EventArgs e)
+        {
+            NOJNICI.Width = 470;
+            NOJNICI.Height = 308;
+
+            KAMEN.Width = 360;
+            KAMEN.Height = 308;
+
+            BUMAGA.Width = 360;
+            BUMAGA.Height = 308;
+            timer.Stop();
+        }
         private void Button_Click(object sender, RoutedEventArgs e)//ножницы
         {
-            
-
+            timer.Start();
+            NOJNICI.Width = 440;
+            NOJNICI.Height = 278;
             Random r = new Random();
             int r1 = r.Next(1, 4);
             if (r1 == 1)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ\n " + nickname + "  проиграл";
-                
+                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ";
+                NICK_WIN.Content = nickname + " ПРОИГРАЛ";
+
             }
             else if (r1 == 2)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ\n " + nickname + "  выиграл";
+                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ";
+                NICK_WIN.Content = nickname + " ВЫИГРАЛ";
                 POBEDA_label.Content = pobeda ++ ;
             }
             else if (r1 == 3)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ\n   НИЧЬЯ";
+                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ";
+                NICK_WIN.Content = "           НИЧЬЯ";
             }
             nickname = textbox1.Text;
         }
@@ -79,22 +102,27 @@ namespace WpfApp91
         
         private void Button_Click3(object sender, RoutedEventArgs e) ////КАМЕНЬ
         {
-            
+            timer.Start();
+            KAMEN.Width = 330;
+            KAMEN.Height = 278;
             Random r = new Random();
             int r1 = r.Next(1, 4);
+            NICK_WIN.Content = nickname;
             if (r1 == 1)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n    НИЧЬЯ";
+                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ";
+                NICK_WIN.Content = "           НИЧЬЯ";
             }
             else if (r1 == 2)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n " + nickname + "  выиграл" ;
+                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ";
+                NICK_WIN.Content = nickname + " ВЫИГРАЛ";
                 POBEDA_label.Content = pobeda ++;
             }
             else if (r1 == 3)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n " + nickname + "  проиграл";
-                
+                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ";
+                NICK_WIN.Content = nickname + " ПРОИГРАЛ";
             }
             nickname = textbox1.Text;
         }
@@ -102,22 +130,31 @@ namespace WpfApp91
         private void Button_Click_2(object sender, RoutedEventArgs e) //БУМАГА
         {
             
+
+            timer.Start();
+            BUMAGA.Width = 330;
+            BUMAGA.Height = 278;
             Random r = new Random();
             int r1 = r.Next(1, 4);
             if (r1 == 1)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ \n " + nickname + "  выиграл";
+                labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ";
+                NICK_WIN.Content = nickname + " ВЫИГРАЛ";
                 POBEDA_label.Content = pobeda ++;
             }
             else if (r1 == 2)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ \n    НИЧЬЯ";
+                labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ";
+                NICK_WIN.Content = "           НИЧЬЯ";
             }
             else if (r1 == 3)
             {
-                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ \n " + nickname + "  проиграл";
+                labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ";
+                NICK_WIN.Content = nickname + " ПРОИГРАЛ";
             }
             nickname = textbox1.Text;
+
+            
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
