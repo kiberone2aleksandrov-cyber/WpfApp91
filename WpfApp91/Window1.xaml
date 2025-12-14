@@ -68,7 +68,7 @@
 
         </Button>
 
-        <Label Content="Результат:" FontSize="40" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,46,0,0" VerticalAlignment="Top"/>
+        <Label Content="Результат:" FontSize="40" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,29,0,0" VerticalAlignment="Top"/>
 
         <Button x:Name="KAMEN" Content="" HorizontalAlignment="Left" Margin="1375,0,0,0" VerticalAlignment="Center" Height="308" Width="360" RenderTransformOrigin="0.5,0.5" Click="Button_Click3" BorderThickness="0,0,0,0">
             <Button.Background>
@@ -88,7 +88,7 @@
         <Label x:Name="labelResult" Foreground="LightGray" FontSize="48" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,114,0,0" VerticalAlignment="Top" Height="97" Width="708" FontFamily="Arial Black">
 
         </Label>
-        <TextBox  HorizontalAlignment="Left" Margin="10,891,0,0" FontSize="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" Height="52"  BorderBrush="#FFAFAFAF" SelectionBrush="White" SelectionTextBrush="White" Foreground="DarkGray" x:Name="textbox1" TextChanged="TextBox_TextChanged">
+        <TextBox  HorizontalAlignment="Left" Text=""  MaxLength="8" Margin="10,891,0,0" FontSize="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="245" Height="52"  BorderBrush="#FFAFAFAF" SelectionBrush="White" SelectionTextBrush="White" Foreground="DarkGray" x:Name="textbox1" TextChanged="TextBox_TextChanged">
             <TextBox.Style>
                 <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                     <Style.Resources>
@@ -115,7 +115,9 @@
         <Label Content="Побед:" HorizontalAlignment="Left" Foreground="White" FontSize="50" FontWeight="Bold"  Margin="813,858,0,0" VerticalAlignment="Top"/>
         <Label x:Name="POBEDA_label" Content="0" FontSize="40" HorizontalAlignment="Left" Margin="1016,869,0,0" Foreground="White" FontWeight="Bold" VerticalAlignment="Top" RenderTransformOrigin="-1.671,0.583"/>
         <Label x:Name="achievment" Content="открыто достижение: победитель по жизни" FontSize="30" Visibility="Hidden" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="1245,10,0,0" VerticalAlignment="Top" Height="46" Width="665"/>
-        <Label x:Name="NICK_WIN"  Foreground="LightGray" Content="" HorizontalAlignment="Left" Margin="725,216,0,0" VerticalAlignment="Top" Height="98" Width="498" FontSize="48" FontFamily="Segoe UI Black"/>
+        <Label x:Name="NICK_WIN"  Foreground="LightGray" Content="" HorizontalAlignment="Left" Margin="877,232,0,0" VerticalAlignment="Top" Height="65" Width="318" FontSize="48" FontFamily="Segoe UI Black"/>
+        <Label x:Name="nick_label"  Foreground="LightGray" Content="            ТЫ" HorizontalAlignment="Left" Margin="606,232,0,0" VerticalAlignment="Top" Height="105" Width="318" FontSize="48" FontFamily="Segoe UI Black" Visibility="Hidden"/>
+        <Label Content="Максимум 7 символов" FontSize="22" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,943,0,0" VerticalAlignment="Top" Height="39" Width="284"/>
 
 
 

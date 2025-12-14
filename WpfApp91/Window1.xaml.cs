@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
+using System.Threading.Tasks;
 
 namespace WpfApp91
 {
@@ -31,59 +32,78 @@ namespace WpfApp91
         public Window1()
         {          
             InitializeComponent();
-            if (Razreshenie.a == 1)
-            {
-                this.Width = 1920;
-                this.Height = 1080;
-            }
+           
             WindowState = WindowState.Maximized;
             POBEDA_label.Content = pobeda;
-
-            achievments();
-
-
             
-            timer.Interval = TimeSpan.FromMilliseconds(50);
+            timer.Interval = TimeSpan.FromMilliseconds(5000);
             timer.Tick += timer_Tick;
             
         }
         void timer_Tick(object sender, EventArgs e)
         {
-            NOJNICI.Width = 470;
-            NOJNICI.Height = 308;
-
-            KAMEN.Width = 360;
-            KAMEN.Height = 308;
-
-            BUMAGA.Width = 360;
-            BUMAGA.Height = 308;
+            achievment.Visibility = Visibility.Hidden;
             timer.Stop();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)//ножницы
+        
+        private void AnimateSize(FrameworkElement target, double toW, double toH, double durationMs = 200, IEasingFunction easing = null)//gpt
         {
-            timer.Start();
-            NOJNICI.Width = 440;
-            NOJNICI.Height = 278;
+            var dur = TimeSpan.FromMilliseconds(durationMs);
+
+            var animW = new DoubleAnimation
+            {
+                To = toW,
+                Duration = new Duration(dur),
+                EasingFunction = easing
+            };
+
+            var animH = new DoubleAnimation
+            {
+                To = toH,
+                Duration = new Duration(dur),
+                EasingFunction = easing
+            };
+
+            target.BeginAnimation(FrameworkElement.WidthProperty, animW);
+            target.BeginAnimation(FrameworkElement.HeightProperty, animH);
+        }
+        private async void Button_Click(object sender, RoutedEventArgs e)//ножницы
+        {
+            AnimateSize(NOJNICI, 440, 278, durationMs: 80, easing: new CubicEase { EasingMode = EasingMode.EaseOut }); //gpt
+            // подождать пока "вжатие" закончится
+            await Task.Delay(100);//gpt
+              // плавно вернуть исходный размер
+            AnimateSize(NOJNICI, 470, 308, durationMs: 180, easing: new CubicEase { EasingMode = EasingMode.EaseOut });//gpt
+
             Random r = new Random();
             int r1 = r.Next(1, 4);
             if (r1 == 1)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ";
-                NICK_WIN.Content = nickname + " ПРОИГРАЛ";
+                nick_label.Visibility = Visibility.Visible;
+                NICK_WIN.Content = "ПРОИГРАЛ";
 
             }
             else if (r1 == 2)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ";
-                NICK_WIN.Content = nickname + " ВЫИГРАЛ";
-                POBEDA_label.Content = pobeda ++ ;
+                nick_label.Visibility = Visibility.Visible;
+                NICK_WIN.Content = "ВЫИГРАЛ";
+                pobeda++;
+                POBEDA_label.Content = pobeda ;
             }
             else if (r1 == 3)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ";
-                NICK_WIN.Content = "           НИЧЬЯ";
+                nick_label.Visibility = Visibility.Hidden;
+                NICK_WIN.Content = "НИЧЬЯ";
             }
-            nickname = textbox1.Text;
+           
+            if (pobeda == 15)
+            {
+                timer.Start();
+                achievment.Visibility = Visibility.Visible;
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -96,79 +116,103 @@ namespace WpfApp91
             
                 form2.VernutsaVigruButton.Visibility = Visibility.Visible;
                 form2.VernutsaVigruLabel.Visibility = Visibility.Visible;
+            Class1.GGG = true;
             
 
         }
         
-        private void Button_Click3(object sender, RoutedEventArgs e) ////КАМЕНЬ
+        private async void Button_Click3(object sender, RoutedEventArgs e) ////КАМЕНЬ
         {
-            timer.Start();
-            KAMEN.Width = 330;
-            KAMEN.Height = 278;
+            
+            //gpt
+            AnimateSize(KAMEN, 330, 278, durationMs: 80, easing: new CubicEase { EasingMode = EasingMode.EaseOut }); 
+                 // подождать пока "вжатие" закончится
+            await Task.Delay(100);
+                 // плавно вернуть исходный размер
+            AnimateSize(KAMEN, 360, 308, durationMs: 180, easing: new CubicEase { EasingMode = EasingMode.EaseOut });
+            //
+
             Random r = new Random();
             int r1 = r.Next(1, 4);
             NICK_WIN.Content = nickname;
             if (r1 == 1)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ";
-                NICK_WIN.Content = "           НИЧЬЯ";
+                nick_label.Visibility = Visibility.Hidden;
+                NICK_WIN.Content = "НИЧЬЯ";
             }
             else if (r1 == 2)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ";
-                NICK_WIN.Content = nickname + " ВЫИГРАЛ";
+                nick_label.Visibility = Visibility.Visible;
+                NICK_WIN.Content = "ВЫИГРАЛ";
                 POBEDA_label.Content = pobeda ++;
             }
             else if (r1 == 3)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ";
-                NICK_WIN.Content = nickname + " ПРОИГРАЛ";
+                nick_label.Visibility = Visibility.Visible;
+                NICK_WIN.Content = "ПРОИГРАЛ";
             }
-            nickname = textbox1.Text;
+            
+            if (pobeda == 15)
+            {
+                timer.Start();
+                achievment.Visibility = Visibility.Visible;
+            }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e) //БУМАГА
+        private async void Button_Click_2(object sender, RoutedEventArgs e) //БУМАГА
         {
-            
-
-            timer.Start();
-            BUMAGA.Width = 330;
-            BUMAGA.Height = 278;
+           
+            //gpt
+            AnimateSize(BUMAGA, 330, 278, durationMs: 80, easing: new CubicEase { EasingMode = EasingMode.EaseOut });
+            // подождать пока "вжатие" закончится
+            await Task.Delay(100);
+            // плавно вернуть исходный размер
+            AnimateSize(BUMAGA, 360, 308, durationMs: 180, easing: new CubicEase { EasingMode = EasingMode.EaseOut });
+            //
+           
             Random r = new Random();
             int r1 = r.Next(1, 4);
             if (r1 == 1)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ КАМЕНЬ";
-                NICK_WIN.Content = nickname + " ВЫИГРАЛ";
+                nick_label.Visibility = Visibility.Visible;
+                NICK_WIN.Content = "ВЫИГРАЛ";
                 POBEDA_label.Content = pobeda ++;
             }
             else if (r1 == 2)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ БУМАГУ";
-                NICK_WIN.Content = "           НИЧЬЯ";
+                nick_label.Visibility = Visibility.Hidden;
+                NICK_WIN.Content = "НИЧЬЯ";
             }
             else if (r1 == 3)
             {
                 labelResult.Content = "БОТ ВЫБРАЛ НОЖНИЦЫ";
-                NICK_WIN.Content = nickname + " ПРОИГРАЛ";
+                nick_label.Visibility = Visibility.Visible;
+                NICK_WIN.Content = "ПРОИГРАЛ";
             }
-            nickname = textbox1.Text;
-
             
+
+            if (pobeda == 15)
+            {
+                timer.Start();
+                achievment.Visibility = Visibility.Visible;
+            }
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+            nick_label.Visibility = Visibility.Visible;
+            nick_label.Content = textbox1.Text;
+            if(textbox1.Text == "" || textbox1.Text == " " || textbox1.Text == "  " || textbox1.Text == "   " || textbox1.Text == "    " || textbox1.Text == "     " || textbox1.Text == "      " || textbox1.Text == "       " || textbox1.Text == "        ")
+            {
+                nick_label.Content = "            ТЫ";
+            }
         }
         
-        private void achievments()
-        {
-            if (pobeda == 25)
-            {
-                achievment.Visibility = Visibility.Visible;
-            }
-
-        }
+        
     }
 }

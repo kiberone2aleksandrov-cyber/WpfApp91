@@ -29,15 +29,7 @@ namespace WpfApp91
         {
             InitializeComponent();
             TextAnimation();
-            if (Razreshenie.a == 1)
-            {
-                this.Width = 1920;
-                this.Height = 1080;
-            }
-            if (Razreshenie.a == 1)
-            {
-                wewe.IsChecked = true;
-            }
+            
             WindowState = WindowState.Maximized;
         }
         private void TextAnimation()
@@ -83,26 +75,12 @@ namespace WpfApp91
 
         }
 
-        public void RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void RAZRABOTCHIKI_Click(object sender, RoutedEventArgs e)
         {
             
-            Razreshenie.a = 1;
-            this.Width = 1920;
-            this.Height = 1080;
-        }
-
-        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
-        {
-            Razreshenie.a = 1;
-            this.Width = 2560;
-            this.Height = 1440;
-        }
-
-        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
-        {
-            Razreshenie.a = 1;
-            this.Width = 3840;
-            this.Height = 2160;
+                var form1 = new RAZRABOTCHIKI();
+            form1.Show();
+            this.Close();
         }
     }
 

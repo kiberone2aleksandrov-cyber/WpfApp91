@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp91"
         mc:Ignorable="d"
-         Width="{x:Static SystemParameters.PrimaryScreenWidth}"  
-         Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+         Width="1917"  
+         Height="1097"
         Title="Window2">
-    <Grid>
+    <Grid Width="1920" Height="1080">
 
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -62,12 +62,34 @@
 
         </Button>
         <Label x:Name="VitiVmenu" Content="Выйти в меню" HorizontalAlignment="Left" Foreground="DarkGray" Margin="1702,851,0,0" VerticalAlignment="Top" Width="190" FontSize="24" FontWeight="Bold" Height="42"/>
-        <RadioButton x:Name="wewe" Content="1920x1080" HorizontalAlignment="Left" Margin="650,609,0,0" VerticalAlignment="Top" Height="70" Width="296" FontSize="48" Checked="RadioButton_Checked" IsChecked="False" FontWeight="DemiBold" Grid.RowSpan="2"  />
-        <RadioButton Content="2560x1440" HorizontalAlignment="Left" Margin="650,689,0,0" VerticalAlignment="Top" FontSize="48" Width="296" FontWeight="DemiBold" Checked="RadioButton_Checked_1" Height="63"/>
-        <Label Content="Разрешение" FontWeight="Bold" FontSize="50" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,532,0,0" Height="77" Width="308"/>
-        <Rectangle HorizontalAlignment="Left" Height="112" Margin="596,194,0,0" Stroke="DarkGray" VerticalAlignment="Top" Width="736"/>
-        <Rectangle HorizontalAlignment="Left" Height="107" Margin="596,371,0,0" Stroke="DarkGray" VerticalAlignment="Top" Width="736"/>
-        <Rectangle HorizontalAlignment="Center" Height="350" Margin="0,532,0,0" Stroke="DarkGray" VerticalAlignment="Top" Width="744"/>
-        <RadioButton Content="3840x2160" HorizontalAlignment="Left" Margin="650,776,0,0" VerticalAlignment="Top" FontSize="48" Width="296" FontWeight="DemiBold" Checked="RadioButton_Checked_2" Height="64"/>
+        <Button x:Name="RAZRABOTCHIKI" Content="РАЗРАБОТЧИКИ" Width="Auto" Height="Auto" Foreground="Purple" FontWeight="Bold" Margin="698,610,681,351" FontSize="36" Click="RAZRABOTCHIKI_Click" FontFamily="Franklin Gothic Heavy">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Margin="441,705,0,0" VerticalAlignment="Top" Height="162" Width="225" BorderThickness="0,0,0,0">
+            <Button.Background>
+                <ImageBrush ImageSource="/c5c03815a75afe6cdfbde31880d3f501-edited-free (carve.photos).png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

@@ -9,5 +9,6 @@ namespace WpfApp91
     public static class Class1
     {
         public static bool vihodvmenu = false;
+        public static bool GGG;
     }
 }

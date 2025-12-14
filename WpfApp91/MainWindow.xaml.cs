@@ -27,11 +27,7 @@ public partial class MainWindow : Window
     {      
         InitializeComponent();       
         TextAnimation();
-        if (Razreshenie.a == 1)
-        {
-            this.Width = 1920;
-            this.Height = 1080;
-        }
+        
             MediaPlayer player = new MediaPlayer();
         player.Open(new Uri("C:\\Users\\Админ\\Downloads\\FONOVAIA_MUZIKA.mp3", UriKind.RelativeOrAbsolute));
         player.Play();
@@ -62,26 +58,7 @@ public partial class MainWindow : Window
 
     private void Button_Click_1(object sender, RoutedEventArgs e)
     {
-      /*  IGRAT.PreviewMouseDown += (s, e) =>
-        {
-            var scaleTransform = new ScaleTransform(1.0, 1.0);
-            IGRAT.RenderTransformOrigin = new Point(0.5, 0.5);
-            IGRAT.RenderTransform = scaleTransform;
-
-            var animation = new DoubleAnimation(1.0, 1.1, TimeSpan.FromMilliseconds(100));
-            scaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, animation);
-            scaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, animation);
-        };
-
-        IGRAT.PreviewMouseUp += (s, e) =>
-        {
-            if (IGRAT.RenderTransform is ScaleTransform scaleTransform)
-            {
-                var animation = new DoubleAnimation(1.1, 1.0, TimeSpan.FromMilliseconds(100));
-                scaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, animation);
-                scaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, animation);
-            }
-        };*/
+      
         var form1 = new Window1();
         form1.Show();
         this.Close();
@@ -93,7 +70,7 @@ public partial class MainWindow : Window
         var form2 = new Window2();
         form2.Show();
         this.Close();
-
+        Class1.GGG = false;
         Class1.vihodvmenu = false;                   
             form2.VernutsaVigruButton.Visibility = Visibility.Hidden;
             form2.VernutsaVigruLabel.Visibility = Visibility.Hidden;

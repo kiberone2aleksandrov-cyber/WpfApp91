@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApp91.RAZRABOTCHIKI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp91"
+        mc:Ignorable="d"
+        Title="RAZRABOTCHIKI" Height="1080" Width="1920">
+    <Grid Width="1920" Height="1081">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1072*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/5fe927315d7c49f6e662b4bc938cf9aa.png" Stretch="Uniform"/>
+        </Grid.Background>
+        <Button Content="" HorizontalAlignment="Left" Margin="35,27,0,0" VerticalAlignment="Top" Height="535" Width="635">
+            <Button.Background>
+                <ImageBrush ImageSource="/photo_2025-12-14_18-42-33.jpg"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Barsonch1k" HorizontalAlignment="Left" Margin="61,594,0,0" VerticalAlignment="Top" FontFamily="Ravie" Height="136" Width="575" FontSize="72"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="1318,27,0,0" VerticalAlignment="Top" Height="532" Width="554" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.616"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="1.989"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="/dda.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="MIxXAA" HorizontalAlignment="Left" Margin="1408,569,0,0" VerticalAlignment="Top" FontFamily="Ravie" Height="117" Width="456" FontSize="72"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="786,628,0,0" VerticalAlignment="Top" Height="404" Width="480">
+            <Button.Background>
+                <ImageBrush ImageSource="/цфафцаЦАФА.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Margin="114,873,0,0" VerticalAlignment="Top" Height="125" Width="186" BorderThickness="0,0,0,0" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/i-no-bg-preview (carve.photos).png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Вернуться в настройки" HorizontalAlignment="Left" Margin="35,998,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Height="74" Width="601" FontSize="36"/>
+    </Grid>
+</Window>
