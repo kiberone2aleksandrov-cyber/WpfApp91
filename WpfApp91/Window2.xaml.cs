@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,7 @@ namespace WpfApp91
             TextAnimation();
             
             WindowState = WindowState.Maximized;
+            
         }
         private void TextAnimation()
         {
@@ -82,6 +84,13 @@ namespace WpfApp91
             form1.Show();
             this.Close();
         }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+          
+         }
+
+        
     }
 
 }

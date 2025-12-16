@@ -117,7 +117,7 @@
         <Label x:Name="achievment" Content="открыто достижение: победитель по жизни" FontSize="30" Visibility="Hidden" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="1245,10,0,0" VerticalAlignment="Top" Height="46" Width="665"/>
         <Label x:Name="NICK_WIN"  Foreground="LightGray" Content="" HorizontalAlignment="Left" Margin="877,232,0,0" VerticalAlignment="Top" Height="65" Width="318" FontSize="48" FontFamily="Segoe UI Black"/>
         <Label x:Name="nick_label"  Foreground="LightGray" Content="            ТЫ" HorizontalAlignment="Left" Margin="606,232,0,0" VerticalAlignment="Top" Height="105" Width="318" FontSize="48" FontFamily="Segoe UI Black" Visibility="Hidden"/>
-        <Label Content="Максимум 7 символов" FontSize="22" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,943,0,0" VerticalAlignment="Top" Height="39" Width="284"/>
+        <Label Content="Максимум 8 символов" FontSize="22" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,943,0,0" VerticalAlignment="Top" Height="39" Width="284"/>
 
 
 

@@ -20,7 +20,7 @@
 
         <Label x:Name ="label1" Content="Настройки" FontWeight="Bold" FontSize="70" Foreground="White" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Height="103" Width="380"/>
 
-        <Slider HorizontalAlignment="Left" Margin="676,276,0,0" VerticalAlignment="Top" Width="585" Height="30"/>
+        <Slider x:Name="VolumeSlider" HorizontalAlignment="Left" Margin="676,276,0,0" VerticalAlignment="Top" Width="585" Height="30"  TickFrequency="1" ValueChanged="Slider_ValueChanged"/>
 
         <Label Content="Чувствительность мыши" FontWeight="Bold" FontSize="50" Foreground="LightGray" HorizontalAlignment="Center" Margin="0,194,0,0" VerticalAlignment="Top" Height="77" Width="620"/>
 

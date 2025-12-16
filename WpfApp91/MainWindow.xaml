@@ -9,6 +9,7 @@
         ResizeMode="CanResizeWithGrip"
         mc:Ignorable="d"     
         Title="MainWindow">
+   
 
     <Grid Loaded="Grid_Loaded" Unloaded="Grid_Unloaded" Width="1920" Height="1080">
         <Grid.Background>
@@ -95,7 +96,7 @@
             </Button.Resources>
 
         </Button>
-        <Label Content="Версия 1.0" HorizontalAlignment="Left" Width="Auto" Height="Auto" FontWeight="Bold" Foreground="White" FontSize="20" Margin="1782,1009,0,0" VerticalAlignment="Top" />
-
+        <Label Content="Версия 1.00" HorizontalAlignment="Left" Width="Auto" Height="Auto" FontWeight="Bold" Foreground="White" FontSize="20" Margin="1782,1009,0,0" VerticalAlignment="Top" />
+        
     </Grid>
 </Window>

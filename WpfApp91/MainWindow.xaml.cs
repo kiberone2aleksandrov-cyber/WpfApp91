@@ -1,4 +1,5 @@
-﻿using System.Reflection.Emit;
+﻿using System.Media;
+using System.Reflection.Emit;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
@@ -20,21 +21,23 @@ namespace WpfApp91;
 /// </summary>
 public partial class MainWindow : Window
 {
- 
-    
-    
+    bool aas = false;
+    private MediaPlayer player = new MediaPlayer();
     public MainWindow()
     {      
         InitializeComponent();       
         TextAnimation();
-        
-            MediaPlayer player = new MediaPlayer();
-        player.Open(new Uri("C:\\Users\\Админ\\Downloads\\FONOVAIA_MUZIKA.mp3", UriKind.RelativeOrAbsolute));
-        player.Play();
         WindowState = WindowState.Maximized;
+        
+       
+            AudioService.Instance.Play("C:\\Users\\kotov\\Downloads\\kuk.wav");
+
+      
+
     }
     
-    
+ 
+
     private void TextAnimation()
     {
         ColorAnimation textanim = new ColorAnimation
